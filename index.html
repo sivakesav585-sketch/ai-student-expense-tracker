@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Expense Tracker</h1>
+    <p>Manage your money. Build better habits.</p>
+  </header>
+
+  <main>
+    <section class="summary">
+      <h2>Monthly Budget</h2>
+      <p>₹<span id="budget">5000</span></p>
+      <label for="budgetInput">Set your budget (₹)</label>
+      <input id="budgetInput" type="number" min="0" value="5000">
+      <button id="setBudget">Update Budget</button>
+    </section>
+
+    <section class="summary">
+      <h2>Total Spent</h2>
+      <p>₹<span id="total">0</span></p>
+      <p>Remaining: ₹<span id="remaining">5000</span></p>
+    </section>
+
+    <section class="panel">
+      <h2>Add an Expense</h2>
+      <form id="expenseForm">
+        <label for="description">What did you spend on?</label>
+        <input id="description" type="text" placeholder="e.g. Lunch" required>
+
+        <label for="amount">Amount (₹)</label>
+        <input id="amount" type="number" min="0.01" step="0.01" required>
+
+        <label for="category">Category</label>
+        <select id="category">
+          <option>Food</option>
+          <option>Travel</option>
+          <option>Education</option>
+          <option>Shopping</option>
+          <option>Other</option>
+        </select>
+
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Expenses</h2>
+      <ul id="expenseList"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Smart Spending Tip</h2>
+      <p id="insight">Add an expense to receive your first spending tip.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by a student, for students.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
